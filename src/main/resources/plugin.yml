@@ -1,0 +1,8 @@
+name: NoMinimapSorry
+main: dev.dejay.nominimapsorry.Nominimapsorry
+version: '${version}'
+description: Disables Xaero's Maps
+authors:
+  - DeJayDev
+api-version: '1.20'
+depend: [ProtocolLib, packetevents]
