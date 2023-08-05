@@ -1,5 +1,5 @@
 name: NoMinimapSorry
-main: dev.dejay.nominimapsorry.Nominimapsorry
+main: dev.dejay.nominimapsorry.NoMinimapSorry
 version: '${version}'
 description: Disables Xaero's Maps
 authors:

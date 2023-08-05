@@ -30,7 +30,7 @@ public final class NoMinimapSorry extends JavaPlugin implements Listener {
         PacketEvents.getAPI().getSettings()
                 .checkForUpdates(false)
                 .bStats(false)
-                .debug(true);
+                .debug(false);
         PacketEvents.getAPI().load();
 
         PacketEvents.getAPI().getEventManager().registerListener(new NoMinimapPacketListener());
