@@ -1,12 +1,12 @@
 plugins {
   `java-library`
   id("io.papermc.paperweight.userdev") version "1.5.5"
-  id("xyz.jpenilla.run-paper") version "2.1.0" // Adds runServer and runMojangMappedServer tasks for testing
+  id("xyz.jpenilla.run-paper") version "2.1.0"
 }
 
 group = "dev.dejay.nominimapsorry"
-version = "1.0.0-SNAPSHOT"
-description = "Test plugin for paperweight-userdev"
+version = "1.0.0"
+description = "disables xaeros maps"
 
 java {
   toolchain.languageVersion.set(JavaLanguageVersion.of(17))

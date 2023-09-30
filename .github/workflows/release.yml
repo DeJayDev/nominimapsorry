@@ -1,0 +1,40 @@
+name: Release Plugin
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+    contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v4
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1
+
+      - name: Set up Azul Java 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+
+      - name: Get SHA
+        id: short-sha
+        uses: benjlevesque/short-sha@v2.2
+
+      - name: GitHub Release
+        id: make_release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Release ${{ steps.short-sha.outputs.sha }}
+          tag_name: ${{ steps.short-sha.outputs.sha }}
+          files: |
+            build/libs/nominimapsorry-*.jar
