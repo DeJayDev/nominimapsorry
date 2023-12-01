@@ -1,7 +1,7 @@
 plugins {
   `java-library`
-  id("io.papermc.paperweight.userdev") version "1.5.5"
-  id("xyz.jpenilla.run-paper") version "2.1.0"
+  id("io.papermc.paperweight.userdev") version "1.5.10"
+  id("xyz.jpenilla.run-paper") version "2.2.2"
 }
 
 group = "dev.dejay.nominimapsorry"
@@ -26,8 +26,8 @@ repositories {
 
 dependencies {
   paperweight.paperDevBundle("1.20.1-R0.1-SNAPSHOT")
-  compileOnly("com.comphenix.protocol:ProtocolLib:4.8.0")
-  compileOnly("com.github.retrooper.packetevents:spigot:2.0-SNAPSHOT")
+  compileOnly("com.comphenix.protocol:ProtocolLib:5.1.0")
+  compileOnly("com.github.retrooper.packetevents:spigot:2.1.0-SNAPSHOT")
 }
 
 tasks {
